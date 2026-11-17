@@ -1,72 +1,86 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riley Smith - Web Projects</title>
-
-    <style>
-        body {
-            background-color: whitesmoke;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 40px;
-        }
-
-        h1 {
-            color: darkred;
-        }
-
-        h2 {
-            color: darkblue;
-        }
-
-        .project {
-            background-color: white;
-            border: 2px solid darkred;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 500px;
-        }
-
-        a {
-            color: darkred;
-            font-size: 18px;
-        }
-
-        .coming-soon {
-            color: gray;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A Bootstrap 3 sports website exploring baseball, golf, and statistics.">
+  <title>Sports by the Numbers | Bootstrap Project</title>
+  <!-- Bootstrap 3 CSS linked through a CDN; no download required. -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-<body>
-
-    <h1>Riley Smith's Web Projects</h1>
-
-    <p>Welcome to my MART 145 website! This page contains
-    the projects I've worked on throughout the semester.</p>
-
-    <div class="project">
-        <h2>Five-Page Website</h2>
-        <p>A website about my interests, including baseball,
-        golf, and the Boston Red Sox.</p>
-        <a href="five-page-website/index.html">View Website</a>
+<body id="top">
+  <nav class="navbar navbar-inverse" aria-label="Main navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false" aria-controls="main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#top">Sports by the Numbers</a>
+      </div>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">About</a></li><li><a href="#sports">Sports</a></li><li><a href="#numbers">Statistics</a></li><li><a href="#bootstrap">Bootstrap Features</a></li>
+          <li><a href="../HTML%20Forms/registration.html">Register</a></li>
+        </ul>
+      </div>
     </div>
-
-    <div class="project">
-        <h2>Bootstrap Website</h2>
-        <p class="coming-soon">Coming Soon</p>
+  </nav>
+  <header class="hero text-center">
+    <div class="container">
+      <p class="text-uppercase">MART 145 · Bootstrap 3 practice</p>
+      <h1>Sports by the Numbers</h1>
+      <p class="lead">Baseball, golf, and the statistics that make sports more interesting.</p>
+      <a href="#sports" class="btn btn-default btn-lg">Explore the site</a>
     </div>
-
-    <div class="project">
-        <h2>Final Portfolio</h2>
-        <p class="coming-soon">Coming Soon</p>
-    </div>
-
+  </header>
+  <main>
+    <section class="section" id="about"><div class="container">
+      <h2>About this site <small>Typography example</small></h2>
+      <p class="lead">I enjoy watching and playing sports, especially baseball and golf.</p>
+      <p>This website is a practice project for learning Bootstrap 3. It uses a responsive layout, typography, tables, images, navigation, and a jumbotron-style section.</p>
+      <blockquote><p>Statistics give us another way to look at what happens on the field.</p><footer>Sports analysis perspective</footer></blockquote>
+    </div></section>
+    <section class="section section-alt" id="sports"><div class="container">
+      <h2>Sports I follow <small>Grid basics and images</small></h2>
+      <div class="row">
+        <div class="col-sm-6"><article class="feature-card">
+          <img class="img-responsive sport-image" src="images/baseball.svg" alt="Illustration of a baseball on a green field">
+          <h3>Baseball</h3><p>Baseball combines individual performance, team strategy, and lots of statistical questions.</p>
+        </article></div>
+        <div class="col-sm-6"><article class="feature-card">
+          <img class="img-responsive sport-image" src="images/golf.svg" alt="Illustration of a golf green, flag, and ball">
+          <h3>Golf</h3><p>Golf is about precision and consistency, and each round provides plenty of numbers to analyze.</p>
+        </article></div>
+      </div>
+    </div></section>
+    <section class="section" id="numbers"><div class="container">
+      <h2>Sample sports statistics <small>Bootstrap table</small></h2>
+      <p>The values below are <strong>illustrative examples</strong>, not real player or team data.</p>
+      <div class="table-responsive"><table class="table table-striped table-bordered table-hover">
+        <caption>Example measures across two sports</caption>
+        <thead><tr><th scope="col">Sport</th><th scope="col">Metric</th><th scope="col">Sample value</th><th scope="col">What it measures</th></tr></thead>
+        <tbody><tr><td>Baseball</td><td>Batting average</td><td>.285</td><td>Hits per at-bat</td></tr>
+        <tr><td>Baseball</td><td>On-base percentage</td><td>.360</td><td>How often a batter reaches base</td></tr>
+        <tr><td>Golf</td><td>Fairways hit</td><td>10 of 14</td><td>Driving accuracy</td></tr>
+        <tr><td>Golf</td><td>Greens in regulation</td><td>12 of 18</td><td>Approach-shot success</td></tr></tbody>
+      </table></div>
+    </div></section>
+    <section class="section section-alt" id="bootstrap"><div class="container">
+      <div class="jumbotron custom-jumbo text-center"><h2>Built with Bootstrap 3</h2>
+        <p>Bootstrap makes it easier to organize and style a website across screen sizes.</p>
+        <p><a class="btn btn-accent btn-lg" href="../HTML%20Forms/registration.html">Try the HTML registration form</a></p>
+      </div>
+      <div class="row">
+        <div class="col-sm-4"><div class="feature-card"><h3><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Layout</h3><p><code>.container</code>, <code>.row</code>, and <code>.col-sm-6</code> create responsive columns.</p></div></div>
+        <div class="col-sm-4"><div class="feature-card"><h3><span class="glyphicon glyphicon-text-size" aria-hidden="true"></span> Typography</h3><p>Headings, lead text, small labels, and blockquotes show Bootstrap's text styling.</p></div></div>
+        <div class="col-sm-4"><div class="feature-card"><h3><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Components</h3><p>Responsive images, striped tables, a jumbotron, buttons, and a navigation bar.</p></div></div>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="container text-center"><p>MART 145 · Bootstrap 3 exploration project</p><a href="#top">Back to top</a></div></footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
-  

@@ -1,0 +1,12 @@
+body {font-family: 'Helvetica Neue',Arial,sans-serif;color:#243247;line-height:1.7;}
+.navbar {border-radius:0;margin-bottom:0;border:0;background:#11243a;}
+.navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav>li>a {color:#f4f7fb;}
+.navbar-inverse .navbar-nav>li>a:hover{color:#9de0d8;}
+.hero{background:linear-gradient(115deg,#123b50,#116b65);color:#fff;padding:78px 20px;}
+.hero h1{font-weight:700;font-size:clamp(38px,5vw,64px);}
+.hero .lead{max-width:740px;margin:18px auto 28px;}
+.section{padding:50px 0;}.section-alt{background:#f2f6f8;}
+.section h2{margin-bottom:22px;font-weight:650;}.feature-card{background:white;border:1px solid #dce5eb;padding:22px;border-radius:8px;margin-bottom:20px;min-height:210px;}
+.feature-card h3{margin-top:10px;}.sport-image{max-height:260px;width:100%;object-fit:cover;border-radius:8px;}
+.jumbotron.custom-jumbo{background:#dff2ee;border-radius:10px;}.btn-accent{background:#0d716c;color:#fff;border-color:#0d716c;}.btn-accent:hover{background:#095d58;color:#fff;}
+.table>thead>tr>th{background:#145c68;color:#fff;}footer{background:#11243a;color:#dfe8eb;padding:28px 0;}footer a{color:#9de0d8;}
