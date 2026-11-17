@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Form Results | MART 145</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"><style>main{max-width:850px;margin:45px auto}code{overflow-wrap:anywhere}</style></head>
+<body><main class="container"><div class="alert alert-success"><h1>Form submitted (demo)</h1><p>The browser navigated here using GET. No data was stored or emailed.</p></div>
+<h2>URL query string</h2><p><code id="query"></code></p>
+<h2>Submitted values</h2><div class="table-responsive"><table class="table table-bordered table-striped"><thead><tr><th>Field name</th><th>Value</th></tr></thead><tbody id="fields"></tbody></table></div>
+<p><a href="registration.html" class="btn btn-primary">Back to form</a></p>
+<script>
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  document.getElementById('query').textContent = window.location.search || '(no query string present)';
+  var tbody = document.getElementById('fields');
+  params.forEach(function(value,key){var tr=document.createElement('tr');var td1=document.createElement('td');var td2=document.createElement('td');td1.textContent=key;td2.textContent=value;tr.appendChild(td1);tr.appendChild(td2);tbody.appendChild(tr);});
+  if (!window.location.search){var tr=document.createElement('tr');var td=document.createElement('td');td.colSpan=2;td.textContent='Try submitting the registration form first.';tr.appendChild(td);tbody.appendChild(tr);}
+}());
+</script></main></body></html>
